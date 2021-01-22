@@ -21,7 +21,7 @@ namespace Hokemon_U
         public int Health
         {
             get { return health; }
-            set { Health = value; }
+            set { health = value; }
         }
 
         // METHODS
@@ -31,10 +31,10 @@ namespace Hokemon_U
             provide_name();
             max_health = 100;
             health = Random_int_generator(10, max_health);
-            attack = Random_int_generator(10, 100);
-            speed = Random_int_generator(10, 100);
-            defense = Random_int_generator(10, 100);
-        }
+            attack = Random_int_generator(10, 100);                         //going to have to change this - if statement with console.readlines. (this means changing in program.cs)
+            speed = Random_int_generator(10, 100);                          //Set stats based on pokemon name e.g if name == harizard: health = x etc.. (this is changed in here)
+            defense = Random_int_generator(10, 100);                        // that means commenting out the random int generator since that wont matter unless im going to do ranges for attacks.
+        }                                                                   //see below for random int gen. 
 
         public void provide_name()
         {

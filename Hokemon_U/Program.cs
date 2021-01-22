@@ -31,31 +31,35 @@ namespace Hokemon_U
             
             hoke03.get_details();
 
+            hokeObject01.About();
+            hoke02.About();
+
+            Hokemon hoke04 = new Hokemon();
+            hoke04.get_details();
+
+            Halor haloHokemon01 = new Halor(); // INSTANTIATION from Halor Class
+            haloHokemon01.get_details();
+            //Demonstrating POLYMORPHISM with about method
+            // Hokemon instance hoke04 + halor instance halohokemon01
+            hoke04.About();
+            haloHokemon01.About();
+
               
 
             Battle_Arena firstArena = new Battle_Arena(); //INSTANTIATED Battle_Arena
 
             
-            firstArena.ChallengeMe(hokeObject01);
+            firstArena.ChallengeMe(haloHokemon01);
 
-            firstArena.ChallengeAccepted(hokeObject01, hoke03); //passing two objects into the firstArena
+            firstArena.ChallengeAccepted(haloHokemon01, hoke02); //passing two objects into the firstArena
 
-            attackValue = attacker.attackCalc();
-            defenceValue = defender.defenceCalc();
+            //firstArena.RequestAChallenger(HokeObject01); // ARGUMENT HokeObject01
+                                                         // passed into the 
+                                                         // firstArena object
+                                                         // method Req....
+            //firstArena.AcceptingTheBattle(HokeObject01, Hoke02);
 
-            while(Convert.ToInt32(defender.Health) >= 0 || Convert.ToInt32(attacker.Health) >=0)
-            { }
-
-            Defender.Health = (Defender.Health
-
-            //LOOP:
-            for (int i = 0; i < 2; i++)
-            {
-
-            }
-
-            //hoke02.about();
-            //HalorHokemon01.Aboutt();
+            firstArena.Battle(haloHokemon01, hoke02);
         }
     }
 }
