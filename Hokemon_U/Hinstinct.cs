@@ -9,7 +9,7 @@ namespace Hokemon_U
         
         private string team = "Hinstinct";
 
-        public void Aboutt()
+        public void about()
         {
             Console.WriteLine("I am {0}, part of team {1}!!", Name, team);
         }

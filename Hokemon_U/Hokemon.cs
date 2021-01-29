@@ -11,6 +11,7 @@ namespace Hokemon_U
         private int attack;
         private int speed;
         private int defense;
+        private string team = "Hokemon";
 
         public string Name
         {
@@ -36,7 +37,7 @@ namespace Hokemon_U
             defense = Random_int_generator(10, 100);                        // that means commenting out the random int generator since that wont matter unless im going to do ranges for attacks.
         }                                                                   //see below for random int gen. 
 
-        public void provide_name()
+        public void provide_name() // METHOD
         {
             Console.WriteLine("What Hokemon do you want?");
             name = Console.ReadLine();
@@ -61,7 +62,7 @@ namespace Hokemon_U
 
         public void About()
         {
-            Console.WriteLine("I am a mystical species called Hokemon");
+            Console.WriteLine("hi");
         }
 
         public int attackCalc()
